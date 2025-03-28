@@ -13,10 +13,10 @@ local M = {}
 -- Color palette inspired by Studio Ghibli films
 local colors = {
   -- Base colors
-  bg = "#2a2826",          -- Dark warm brown background
-  bg_alt = "#353331",      -- Slightly lighter background
-  fg = "#e2d9c5",          -- Warm light text (parchment)
-  fg_alt = "#b5ad9a",      -- Secondary text color (muted parchment)
+  bg = "#f9eed8",          -- Warm parchment background (from cursor-app image)
+  bg_alt = "#f3e4c7",      -- Slightly darker parchment
+  fg = "#5a4a3a",          -- Warm brown text
+  fg_alt = "#7a6a5a",      -- Secondary text color (lighter brown)
   
   -- Ghibli signature colors
   totoro_green = "#7fb069", -- Muted green
@@ -25,35 +25,35 @@ local colors = {
   haku_teal = "#5da99f",    -- Dusty teal
   ponyo_pink = "#e5928c",   -- Dusty rose
   forest_green = "#6b8e6b", -- Forest green
-  soot_sprite = "#9a9a9a",  -- Soot sprites
-  kiki_blue = "#6e8bb5",    -- Deep dusty blue
-  zeniba_purple = "#a48bb0", -- Dusty purple
+  soot_sprite = "#5a4a3a",  -- Soot sprites (darker brown)
+  kiki_blue = "#5873a0",    -- Deep dusty blue (darkened for contrast)
+  zeniba_purple = "#8b749e", -- Dusty purple
   catbus_orange = "#e6a264", -- Warm amber orange
-  sky_blue = "#91b2cc",     -- Muted sky blue
-  laputa_gold = "#ecc371",  -- Golden amber
+  sky_blue = "#68c5d2",     -- Bright sky blue (from first image)
+  laputa_gold = "#d5a55e",  -- Golden amber
   
   -- UI element colors
-  line = "#36322e",         -- Line background
-  selection = "#4a423a",    -- Selection background (warm brown)
-  comment = "#8b9a80",      -- Sage green comments
-  guides = "#4d4a43",       -- Indentation guides (darker)
-  visual = "#554a3c",       -- Visual selection (brown)
-  pmenu_bg = "#3b3833",     -- Popup menu background
-  pmenu_sel = "#4d4639",    -- Popup menu selection
+  line = "#f0ddc7",         -- Line background (slightly darker than bg)
+  selection = "#e6d5b8",    -- Selection background (darker parchment)
+  comment = "#91a385",      -- Sage green comments (darkened for contrast)
+  guides = "#d5c9b6",       -- Indentation guides
+  visual = "#e6d1b0",       -- Visual selection
+  pmenu_bg = "#f1e2c7",     -- Popup menu background
+  pmenu_sel = "#e9d5b0",    -- Popup menu selection
   
   -- Syntax colors
-  string = "#a9c287",       -- Muted green for strings
-  number = "#e2a18c",       -- Dusty salmon for numbers
-  keyword = "#91a8c2",      -- Dusty blue for keywords
-  func = "#d99e6a",         -- Amber for functions
-  constant = "#c4a6b3",     -- Dusty mauve for constants
-  type = "#7fb5ae",         -- Dusty teal for types
-  builtin = "#d4a578",      -- Amber brown for builtins
-  operator = "#b6ae9d",     -- Warm gray for operators
+  string = "#6a9155",       -- Darker green for strings (for contrast)
+  number = "#c56a50",       -- Warmer orange-red for numbers
+  keyword = "#5873a0",      -- Dusty blue for keywords
+  func = "#b86e41",         -- Darker amber for functions
+  constant = "#9d7592",     -- Dusty mauve for constants
+  type = "#448581",         -- Darker teal for types
+  builtin = "#b37941",      -- Amber brown for builtins
+  operator = "#7a6a5a",     -- Warm gray for operators
   error = "#e15d67",        -- Red for errors
-  warning = "#e2b36e",      -- Amber for warnings
-  info = "#7299bf",         -- Blue for info
-  hint = "#8ab886",         -- Green for hints
+  warning = "#d29346",      -- Amber for warnings
+  info = "#5873a0",         -- Blue for info
+  hint = "#6b9762",         -- Green for hints
   
   -- Transparent for terminal background
   none = "NONE",
@@ -62,22 +62,22 @@ local colors = {
 -- Terminal colors
 local terminal_colors = {
   [1] = colors.soot_sprite,   -- Black
-  [2] = colors.forest_green,  -- Red
-  [3] = colors.totoro_green,  -- Green
+  [2] = colors.chihiro_red,   -- Red
+  [3] = colors.forest_green,  -- Green
   [4] = colors.catbus_orange, -- Yellow
   [5] = colors.kiki_blue,     -- Blue
   [6] = colors.zeniba_purple, -- Magenta
   [7] = colors.haku_teal,     -- Cyan
   [8] = colors.fg,            -- White
   
-  [9] = colors.soot_sprite,   -- Bright Black
+  [9] = "#7a6a5a",            -- Bright Black (lighter than soot_sprite)
   [10] = colors.chihiro_red,  -- Bright Red
-  [11] = colors.forest_green, -- Bright Green
+  [11] = colors.totoro_green, -- Bright Green
   [12] = colors.laputa_gold,  -- Bright Yellow
   [13] = colors.sky_blue,     -- Bright Blue
   [14] = colors.ponyo_pink,   -- Bright Magenta
   [15] = colors.haku_teal,    -- Bright Cyan
-  [16] = colors.fg_alt,       -- Bright White
+  [16] = "#3a2a1a",           -- Bright White (darker for contrast on light bg)
 }
 
 -- Highlight helper function
@@ -119,7 +119,7 @@ function M.setup()
     Folded = { fg = colors.comment, bg = colors.line },
     FoldColumn = { fg = colors.guides },
     SignColumn = { fg = colors.guides },
-    IncSearch = { fg = colors.bg, bg = colors.laputa_gold },
+    IncSearch = { fg = colors.bg, bg = colors.kiki_blue },
     Substitute = { fg = colors.bg, bg = colors.chihiro_red },
     LineNr = { fg = colors.guides },
     CursorLineNr = { fg = colors.catbus_orange },
@@ -133,7 +133,7 @@ function M.setup()
     PmenuThumb = { bg = colors.fg_alt },
     Question = { fg = colors.forest_green },
     QuickFixLine = { fg = colors.bg, bg = colors.kiki_blue },
-    Search = { fg = colors.bg, bg = colors.laputa_gold, style = "bold" },
+    Search = { fg = colors.bg, bg = colors.kiki_blue, style = "bold" },
     SpecialKey = { fg = colors.guides },
     SpellBad = { sp = colors.chihiro_red, style = "undercurl" },
     SpellCap = { sp = colors.catbus_orange, style = "undercurl" },
@@ -143,7 +143,7 @@ function M.setup()
     StatusLineNC = { fg = colors.fg_alt, bg = colors.bg_alt },
     TabLine = { fg = colors.fg, bg = colors.bg_alt },
     TabLineFill = { bg = colors.bg },
-    TabLineSel = { fg = colors.fg, bg = colors.sky_blue },
+    TabLineSel = { fg = colors.bg, bg = colors.kiki_blue },
     Title = { fg = colors.kiki_blue, style = "bold" },
     Visual = { bg = colors.visual },
     VisualNOS = { bg = colors.visual },
@@ -263,7 +263,7 @@ function M.setup()
     TelescopePromptBorder = { fg = colors.guides, bg = colors.bg_alt },
     TelescopeResultsBorder = { fg = colors.guides, bg = colors.bg_alt },
     TelescopePreviewBorder = { fg = colors.guides, bg = colors.bg_alt },
-    TelescopeMatching = { fg = colors.laputa_gold, style = "bold" },
+    TelescopeMatching = { fg = colors.kiki_blue, style = "bold" },
     TelescopePromptPrefix = { fg = colors.kiki_blue },
     TelescopeSelection = { bg = colors.selection },
     
@@ -271,11 +271,11 @@ function M.setup()
     BufferLineFill = { bg = colors.bg },
     BufferLineBackground = { fg = colors.fg_alt, bg = colors.bg_alt },
     BufferLineBufferVisible = { fg = colors.fg, bg = colors.bg_alt },
-    BufferLineBufferSelected = { fg = colors.fg, bg = colors.sky_blue },
+    BufferLineBufferSelected = { fg = colors.bg, bg = colors.kiki_blue },
     BufferLineTab = { fg = colors.fg, bg = colors.bg_alt },
     BufferLineTabSelected = { fg = colors.bg, bg = colors.kiki_blue },
     BufferLineTabClose = { fg = colors.chihiro_red, bg = colors.bg },
-    BufferLineIndicatorSelected = { fg = colors.haku_teal, bg = colors.sky_blue },
+    BufferLineIndicatorSelected = { fg = colors.haku_teal, bg = colors.kiki_blue },
     
     -- Dashboard
     DashboardHeader = { fg = colors.forest_green },
@@ -299,7 +299,7 @@ function M.setup()
   
   -- Recommended terminal font settings (displayed as a comment)
   vim.cmd([[
-    " Recommended fonts for the Ghibli theme:
+    " Recommended fonts for the Ghibli light theme:
     " - 'Cascadia Code' with ligatures
     " - 'JetBrains Mono' for a clean look
     " - 'Comic Mono' for a slightly playful but readable style
@@ -315,6 +315,10 @@ function M.setup()
     "     italic:
     "       family: "Victor Mono"
     "       style: "Italic"
+    "
+    " To enhance the light theme experience, consider:
+    " - Increasing font weight for better contrast
+    " - Using a warm-tinted terminal background that matches #f9eed8
   ]])
 end
 

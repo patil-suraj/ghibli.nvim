@@ -1,13 +1,14 @@
 # 🌱 Ghibli.nvim
 
-A whimsical Neovim color scheme inspired by the magical worlds of Studio Ghibli films, featuring warm amber tones, vintage sepia backgrounds, and the iconic Ghibli aesthetic.
+A whimsical Neovim color scheme inspired by the magical worlds of Studio Ghibli films, featuring warm parchment tones, soft blue accents, and the iconic Ghibli aesthetic.
 <!-- 
 ![Ghibli.nvim Theme](https://via.placeholder.com/800x450) -->
 
 ## ✨ Features
 
 - 🎨 Color palette inspired by various Studio Ghibli films
-- 🌿 Balanced color scheme with warm earthy tones and golden accents
+- 🌿 Balanced color scheme with warm parchment background and soft accents
+- 🌅 Bright, warm theme evoking the sunlit scenes of Ghibli films
 - 🌟 Support for Treesitter, LSP, and popular plugins
 - 🖋️ Font recommendations to complete the Ghibli aesthetic
 - 🏮 Warm dark theme evoking the nostalgic glow of Ghibli's indoor scenes
@@ -85,10 +86,10 @@ For the complete Ghibli experience, consider using one of these fonts:
 
 The color palette draws inspiration from various Studio Ghibli films:
 
-- **My Neighbor Totoro** - Warm, nostalgic greens and earthtones
-- **Spirited Away** - Rich ambers and vintage lighting
-- **Howl's Moving Castle** - Warm machinery tones and rustic colors
-- **Ponyo** - Coral accents and amber lighting
+- **My Neighbor Totoro** - Warm, nostalgic greens and earthy tones
+- **Spirited Away** - Rich ambers and vintage parchment
+- **Howl's Moving Castle** - Warm machinery tones and soft parchment
+- **Ponyo** - Coral accents and bright skies
 - **Princess Mononoke** - Forest greens and natural tones
 - **Kiki's Delivery Service** - Deep, dusty blues and warm browns
 
