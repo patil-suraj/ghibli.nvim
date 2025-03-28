@@ -18,7 +18,7 @@ A whimsical Neovim color scheme inspired by the magical worlds of Studio Ghibli 
 
 ```lua
 use {
-  'your-username/ghibli.nvim',
+  'patil-suraj/ghibli.nvim',
   config = function()
     -- Load the colorscheme
     require('ghibli').colorscheme()
@@ -30,7 +30,7 @@ use {
 
 ```lua
 {
-  'your-username/ghibli.nvim',
+  'patil-suraj/ghibli.nvim',
   lazy = false, -- make sure we load this during startup
   priority = 1000, -- load before other plugins
   config = function()
@@ -42,7 +42,7 @@ use {
 ### Using [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'your-username/ghibli.nvim'
+Plug 'patil-suraj/ghibli.nvim'
 ```
 
 After installation with vim-plug, add to your init.vim:
