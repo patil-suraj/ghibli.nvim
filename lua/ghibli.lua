@@ -13,47 +13,47 @@ local M = {}
 -- Color palette inspired by Studio Ghibli films
 local colors = {
   -- Base colors
-  bg = "#2a2d3d",          -- Soft dark background (night sky in Ghibli films)
-  bg_alt = "#343748",      -- Slightly lighter background
-  fg = "#d5d1c8",          -- Light text for dark background
-  fg_alt = "#a9a7a2",      -- Secondary text color
+  bg = "#2a2826",          -- Dark warm brown background
+  bg_alt = "#353331",      -- Slightly lighter background
+  fg = "#e2d9c5",          -- Warm light text (parchment)
+  fg_alt = "#b5ad9a",      -- Secondary text color (muted parchment)
   
   -- Ghibli signature colors
-  totoro_green = "#78a383", -- Totoro's body color
-  chihiro_red = "#ff7070",  -- Chihiro's clothes (brightened for dark bg)
-  calcifer = "#ff913c",     -- Calcifer's fiery body
-  haku_teal = "#67b5b7",    -- Haku's dragon color
-  ponyo_pink = "#ffa7a7",   -- Ponyo's dress/hair
-  forest_green = "#7aa489", -- Forest green (Princess Mononoke) (brightened)
-  soot_sprite = "#9a9a9a",  -- Soot sprites from Spirited Away (lightened)
-  kiki_blue = "#7fa3d7",    -- Kiki's deep blue (brightened)
-  zeniba_purple = "#b59ed8", -- Zeniba's purple accents (brightened)
-  catbus_orange = "#ffb777", -- Catbus orange (brightened)
-  sky_blue = "#a4cff4",     -- Ghibli sky blue
-  laputa_gold = "#ffd280",  -- Laputa/Castle in the Sky gold (brightened)
+  totoro_green = "#7fb069", -- Muted green
+  chihiro_red = "#e05c5c",  -- Warm brick red
+  calcifer = "#ff9c3c",     -- Bright amber flame
+  haku_teal = "#5da99f",    -- Dusty teal
+  ponyo_pink = "#e5928c",   -- Dusty rose
+  forest_green = "#6b8e6b", -- Forest green
+  soot_sprite = "#9a9a9a",  -- Soot sprites
+  kiki_blue = "#6e8bb5",    -- Deep dusty blue
+  zeniba_purple = "#a48bb0", -- Dusty purple
+  catbus_orange = "#e6a264", -- Warm amber orange
+  sky_blue = "#91b2cc",     -- Muted sky blue
+  laputa_gold = "#ecc371",  -- Golden amber
   
   -- UI element colors
-  line = "#363a4f",         -- Line background (darker)
-  selection = "#404868",    -- Selection background (dark blue)
-  comment = "#8c9a88",      -- Soft forest comment color
-  guides = "#4b4f64",       -- Indentation guides (darker)
-  visual = "#4a4332",       -- Visual selection (dark warm brown)
-  pmenu_bg = "#383b4d",     -- Popup menu background
-  pmenu_sel = "#404e69",    -- Popup menu selection
+  line = "#36322e",         -- Line background
+  selection = "#4a423a",    -- Selection background (warm brown)
+  comment = "#8b9a80",      -- Sage green comments
+  guides = "#4d4a43",       -- Indentation guides (darker)
+  visual = "#554a3c",       -- Visual selection (brown)
+  pmenu_bg = "#3b3833",     -- Popup menu background
+  pmenu_sel = "#4d4639",    -- Popup menu selection
   
-  -- Syntax colors repurposed from Ghibli palette
-  string = "#a2cc8e",       -- Green for strings (forest) (brightened)
-  number = "#e3a195",       -- Rusty red for numbers (brightened)
-  keyword = "#81a7cc",      -- Sky blue for keywords (brightened)
-  func = "#d5a278",         -- Brown for functions (brightened)
-  constant = "#c295c0",     -- Purple for constants (brightened)
-  type = "#7fb5b5",         -- Teal for types (brightened)
-  builtin = "#d4a578",      -- Orange brown for builtins (brightened)
-  operator = "#a2a6bc",     -- Muted blue-gray for operators (brightened)
-  error = "#e15d67",        -- Bright red for errors
-  warning = "#dbac66",      -- Amber for warnings
-  info = "#65a6dd",         -- Light blue for info
-  hint = "#7caf7f",         -- Green for hints
+  -- Syntax colors
+  string = "#a9c287",       -- Muted green for strings
+  number = "#e2a18c",       -- Dusty salmon for numbers
+  keyword = "#91a8c2",      -- Dusty blue for keywords
+  func = "#d99e6a",         -- Amber for functions
+  constant = "#c4a6b3",     -- Dusty mauve for constants
+  type = "#7fb5ae",         -- Dusty teal for types
+  builtin = "#d4a578",      -- Amber brown for builtins
+  operator = "#b6ae9d",     -- Warm gray for operators
+  error = "#e15d67",        -- Red for errors
+  warning = "#e2b36e",      -- Amber for warnings
+  info = "#7299bf",         -- Blue for info
+  hint = "#8ab886",         -- Green for hints
   
   -- Transparent for terminal background
   none = "NONE",
