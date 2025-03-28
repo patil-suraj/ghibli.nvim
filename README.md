@@ -1,8 +1,8 @@
 # 🌱 Ghibli.nvim
 
 A whimsical Neovim color scheme inspired by the magical worlds of Studio Ghibli films, featuring warm parchment tones, soft blue accents, and the iconic Ghibli aesthetic.
-<!-- 
-![Ghibli.nvim Theme](https://via.placeholder.com/800x450) -->
+ 
+![Ghibli.nvim Theme](./demo/ghibli-nvim.png)
 
 ## ✨ Features
 
