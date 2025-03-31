@@ -9,9 +9,10 @@ A whimsical Neovim color scheme inspired by the magical worlds of Studio Ghibli 
 - 🎨 Color palette inspired by various Studio Ghibli films
 - 🌿 Balanced color scheme with warm parchment background and soft accents
 - 🌅 Bright, warm theme evoking the sunlit scenes of Ghibli films
+- 🌙 Medium-dark theme inspired by the nostalgic glow of Ghibli's indoor scenes
+- 🔄 Easy toggle between light and dark modes
 - 🌟 Support for Treesitter, LSP, and popular plugins
 - 🖋️ Font recommendations to complete the Ghibli aesthetic
-- 🏮 Warm dark theme evoking the nostalgic glow of Ghibli's indoor scenes
 
 ## 🌊 Installation
 
@@ -21,6 +22,11 @@ A whimsical Neovim color scheme inspired by the magical worlds of Studio Ghibli 
 use {
   'patil-suraj/ghibli.nvim',
   config = function()
+    -- Setup with options (optional)
+    require('ghibli').setup({
+      style = "light", -- "light" or "dark"
+    })
+    
     -- Load the colorscheme
     require('ghibli').colorscheme()
   end
@@ -35,6 +41,11 @@ use {
   lazy = false, -- make sure we load this during startup
   priority = 1000, -- load before other plugins
   config = function()
+    -- Setup with options (optional)
+    require('ghibli').setup({
+      style = "light", -- "light" or "dark"
+    })
+    
     require('ghibli').colorscheme()
   end,
 }
@@ -49,6 +60,8 @@ Plug 'patil-suraj/ghibli.nvim'
 After installation with vim-plug, add to your init.vim:
 
 ```vim
+" Optional: set style before loading
+lua require('ghibli').setup({style = "light"})
 colorscheme ghibli
 ```
 
@@ -70,6 +83,35 @@ Or use the plugin command:
 
 ```vim
 :GhibliTheme
+```
+
+### Style Configuration
+
+You can configure the color scheme style (light or dark) before loading:
+
+```lua
+-- Configure with light style (default)
+require('ghibli').setup({
+  style = "light", -- "light" or "dark"
+})
+
+-- Apply the colorscheme
+require('ghibli').colorscheme()
+```
+
+### Toggling Between Styles
+
+Toggle between light and dark modes with the provided command:
+
+```vim
+:GhibliToggle
+```
+
+You can also map this to a key in your configuration:
+
+```lua
+-- Example: Toggle with <leader>ts
+vim.keymap.set('n', '<leader>ts', require('ghibli').toggle, { noremap = true, silent = true })
 ```
 
 ## 🌸 Font Recommendations
